@@ -5,6 +5,8 @@ import time
 
 #Funzione che gestisce l'intera partita
 
+mosse_valide = ['sasso','carta','forbici']
+
 def Partita(mossaComputer):
     verifica=True
     while (verifica):
@@ -13,10 +15,10 @@ def Partita(mossaComputer):
 
         #Ricerca di tutti i casi possibili
 
-        if (mossaGiocatore.lower().capitalize()!="Sasso") and (mossaGiocatore.lower().capitalize()!="Carta") and (mossaGiocatore.lower().capitalize()!="Forbici"):
+        if (mossaGiocatore.lower()!=mosse_valide[0]) and (mossaGiocatore.lower()!=mosse_valide[1]) and (mossaGiocatore.lower()!=mosse_valide[2]):
             print("Inserisci un oggetto tra quelli elencati")
         else:
-            print("Hai scelto: " + mossaGiocatore.lower().capitalize()+"\n")
+            print("Hai scelto: " + mossaGiocatore.lower()+"\n")
             time.sleep(1)
             print("Sas-so!")
             time.sleep(1)
